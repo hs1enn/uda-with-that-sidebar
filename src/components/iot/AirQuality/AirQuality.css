@@ -1,0 +1,150 @@
+/* Global Styles */
+
+
+/* Scoped Container for the air quality calendar */
+.air-quality-container {
+    background: linear-gradient(to bottom, rgba(46, 150, 0, 0.5), rgba(15, 48, 0, 0.5)); /* Gradient with opacity */
+    color: white; /* Ensure text inside the container is white */
+    padding: 30px; /* Increased padding for larger container */
+    /* border-radius: 50px; Add rounded corners to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for depth */
+    width: 80%; /* Make container responsive */
+    max-width: 700px; /* Max width to prevent the calendar from getting too wide */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Take full height of the parent */
+    opacity: 0.9; /* Set the overall opacity of the container */
+    position: relative; /* Optional: For extra control over placement */
+    margin: auto; /* Ensure automatic centering in its parent */
+}
+
+/* Heading Style */
+.air-quality-container h2 {
+    color: white; /* Make the heading text white */
+    font-size: 30px; /* Increase font size for the heading */
+    margin-bottom: 10px; /* Increase margin to separate the heading from the calendar */
+}
+
+/* Calendar Styling */
+.react-calendar {
+    background-color: transparent; /* Transparent background */
+    border: none;
+    width: 100%;      /* Make the calendar take up full container width */
+    max-width: 500px; /* Optional: Set a max width for the calendar */
+    /* height: 100%;     Maintain responsiveness */
+    font-size: 15px;  /* Increase the font size of the calendar text */
+}
+
+/* Tile styling for individual dates */
+.react-calendar__tile {
+    background-color: #ffff; /* Grey background */
+    color: #333; /* Dark text */
+    border-radius: 50%; /* Make the tile circular */
+    font-weight: bold;
+    padding: 20px; /* Increase padding for circular shape */
+    margin: 8px; /* Space between the tiles */
+    transition: all 0.2s ease;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    width: 50px; /* Set a larger width for the circular button */
+    height: 50px; /* Set a larger height for the circular button */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+}
+
+/* Hover Effect for date tiles */
+.react-calendar__tile:enabled:hover {
+    background-color: #b0b0b0; /* Darken on hover */
+}
+
+/* Styling for dates that have air quality data */
+.react-calendar__tile.has-data {
+    background-color: #FFDE59; /* Yellow background for dates with data */
+    color: black;
+}
+
+/* Style for the current day */
+.react-calendar__tile--now {
+    background-color: #ff9800; /* Orange background for the current day */
+    color: white;
+}
+
+/* Optional: Style the calendar navigation header */
+.react-calendar__navigation {
+    background-color: transparent;
+    color: white;
+    margin-bottom: 10px; /* Add spacing between navigation and calendar */
+}
+
+/* Optional: Style the weekday labels */
+.react-calendar__month-view__weekdays {
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Increase the font size for weekdays */
+    margin-bottom: 5px; /* Add spacing below weekday labels */
+}
+
+/* Customize the calendar controls */
+.react-calendar__navigation button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff;
+    padding: 10px 15px; /* Increase padding for larger buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.react-calendar__navigation button:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+
+/* Weekday Labels - Remove the three dots and adjust spacing */
+.react-calendar__month-view__weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Ensure weekdays span evenly across the week */
+    text-align: center; /* Center the text horizontally */
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Increase the font size for weekdays */
+    margin-bottom: 5px; /* Add spacing below weekday labels */
+}
+
+/* Dates and Numbers - Increase spacing */
+.react-calendar__month-view__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Align dates evenly across the week */
+    gap: 0px; /* Add spacing between the date tiles */
+}
+
+.react-calendar__tile {
+    background-color: #ffff; /* Grey background */
+    color: #333; /* Dark text */
+    border-radius: 50%; /* Make the tile circular */
+    font-weight: bold;
+    /* padding: 15px; Adjust padding for better circular shape */
+    margin: 0; /* Remove additional margins for clean alignment */
+    transition: all 0.2s ease;
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+    /* width: 10px; Set a larger width for the circular button */
+    /* height: 5px; Set a larger height for the circular button */
+    display: flex;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+}
+
+/* Optional: Tile Hover Effect */
+.react-calendar__tile:enabled:hover {
+    background-color: #00e9fe; /* Darken on hover */
+}
+
+/* Styling for dates that have air quality data */
+.react-calendar__tile.has-data {
+    background-color: #FFDE59; /* Yellow background for dates with data */
+    color: black;
+}
