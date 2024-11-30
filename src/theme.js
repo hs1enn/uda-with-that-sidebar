@@ -38,7 +38,7 @@ export const tokens = () => ({
     },
     teal: {
       100: "#2E9600",
-      200: "#bbfbfc",
+      200: "#0B1A12",
       300: "#88f9f3",
       400: "#55f8ea",
       500: "#22f7e1",
@@ -49,7 +49,7 @@ export const tokens = () => ({
     },
     cyan: {
       100: "#009FBF",
-      200: "#c5f7fc",
+      200: "#0F0D1A",
       300: "#a3f2f7",
       400: "#81edec",
       500: "#5fe8e1",
@@ -60,7 +60,7 @@ export const tokens = () => ({
     },
     yellow: {
       100: "#FFDE59",
-      200: "#fffbea",
+      200: "#141709",
       300: "#fff7eb",
       400: "#fff2d4",
       500: "#ffeebd",

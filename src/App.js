@@ -21,7 +21,6 @@ const AppContent = () => {
 
   // Define paths that require the Sidebar
   const sidebarPaths = [
-    '/',
     '/profilepage',
     '/airdashboard',
     '/riverdashboard',
@@ -39,7 +38,7 @@ const AppContent = () => {
       <div className="main-content" style={{ flex: 1 }}>
         <Routes>
           {/* Public Routes */}
-          <Route path="/landingpage" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginForm />} />
 
           {/* Private Routes */}

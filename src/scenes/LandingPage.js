@@ -30,7 +30,7 @@ const LandingPage = ({
 
     const handleMouseOver = (e) => {
         e.target.style.backgroundColor = colors.grey[200];
-        e.target.style.boxShadow = `0px 5px 15px ${colors.cyan[400]}`;
+        e.target.style.boxShadow = `0px 5px 15px ${colors.yellow[100]}`;
         e.target.style.transform = 'translateY(-2px)';
     };
 
@@ -118,7 +118,7 @@ const LandingPage = ({
                 <hr style={{
                     width: '624px',
                     border: `1px solid ${colors.grey[100]}`,
-                    margin: '0',
+                    marginTop: '1',
                 }} />
                 <p style={{
                     fontSize: '25px',

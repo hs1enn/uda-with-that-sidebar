@@ -123,7 +123,7 @@ const SidebarComponent = () => {
 
                     <Box paddingLeft={isCollapsed ? undefined : "3%"} display="flex" flexDirection="column" gap="10px">
                         <Item title="Profile" to="/profilepage" icon={<PersonIcon />} selected={selected} setSelected={setSelected} />
-                        <Item title="Exit" to="/landingpage" icon={<ReplyIcon />} selected={selected} setSelected={setSelected} />
+                        <Item title="Logout" to="/" icon={<ReplyIcon />} selected={selected} setSelected={setSelected} />
                     </Box>
                 </Menu>
             </ProSidebar>

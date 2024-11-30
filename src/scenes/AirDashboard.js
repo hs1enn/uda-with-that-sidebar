@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import AirQuality from '../components/iot/AirQuality/AirQuality'; // Import the AirQuality component
 
 const AirDashboard = () => {
   const theme = useTheme();
@@ -10,7 +9,7 @@ const AirDashboard = () => {
   return (
     <Box
       sx={{
-        backgroundColor: colors.black[900],
+        backgroundColor: colors.cyan[200],
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -25,35 +24,32 @@ const AirDashboard = () => {
         style={{
           position: 'absolute',
           top: '-105%',
-          left: '15%',
-          width: '1100px',
-          height: '1100px',
-          background: `radial-gradient(circle, ${colors.cyan[100]} 0%, transparent 70%)`,
-          borderRadius: '50%',
+          left: '-45%',
+          width: '1500px',
+          height: '1500px',
+          background: `linear-gradient(135deg, 
+            rgba(0, 61, 166, 0.20) 60%, 
+            rgba(0, 89, 172, 0.36) 70%,
+            rgba(0, 154, 187, 0.73) 100%)`, 
+          borderRadius: '50%', // Maintain rounded corners if needed
+          filter: 'blur(20px)', // Apply a blur effect for softer edges
           zIndex: 0, // Behind the content
         }}
       ></div>
       <div
         style={{
           position: 'absolute',
-          bottom: '-90%',
-          left: '-35%',
-          width: '1100px',
-          height: '1100px',
-          background: `radial-gradient(circle, ${colors.teal[100]} 0%, transparent 70%)`,
-          borderRadius: '50%',
-          zIndex: 0, // Behind the content
-        }}
-      ></div>
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '-90%',
+          bottom: '-60%',
           right: '-35%',
           width: '1100px',
           height: '1100px',
-          background: `radial-gradient(circle, ${colors.yellow[100]} 0%, transparent 70%)`,
-          borderRadius: '50%',
+          background: `linear-gradient(135deg, 
+            rgba(0, 61, 166, 0.20) 60%, 
+            rgba(0, 89, 172, 0.36) 70%,
+            rgba(0, 154, 187, 0.73) 100%)`, 
+          borderRadius: '50%', // Maintain rounded corners if needed
+          filter: 'blur(20px)', // Apply a blur effect for softer edges
+          transform: 'rotate(150deg)', // Rotate the gradient box
           zIndex: 0, // Behind the content
         }}
       ></div>
@@ -100,48 +96,75 @@ const AirDashboard = () => {
         zIndex={1} // Ensure grid layout stays above stickers
       >
         {/* ROW 1 */}
+        {/* DIVISION 1 */}
         <Box
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor="rgba(255, 255, 255, 0.3)"
           borderRadius="30px"
-          opacity="0.9"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          p="20px"
           zIndex={2} // Ensure this is above stickers
         >
-          <Typography variant="h5" color={colors.grey[100]}>
-            Division 1
-          </Typography>
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
+                Carbon Dioxide
+              </Typography>
+              <Typography
+                variant="h7"
+                fontWeight="bold"
+                color={colors.grey[100]}
+              >
+                Level
+              </Typography>
+            </Box>
+          </Box>
+          <Box height="250px" m="-20px 0 0 0">
+            
+          </Box>
         </Box>
 
-        {/* Integrate AirQuality Calendar in Division 2 */}
-      <Box
-        gridColumn="span 4"
-        gridRow="span 2"
-        backgroundColor="rgba(255, 255, 255, 0.9)"
-        borderRadius="30px"
-        // p="10px"
-        zIndex={2} // Ensure this is above stickers
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        overflow="hidden" // Ensure content stays within the container
-      >
+        {/* Division 2 */}
         <Box
-          sx={{
-            width: "100%",
-            height: "100%", // Fill the parent container
-            borderRadius: "inherit", // Match the parent Box's border radius
-          }}
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor="rgba(255, 255, 255, 0.3)"
+          borderRadius="30px"
+          zIndex={2} // Ensure this is above stickers
         >
-          <AirQuality isDashboard={true} />
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
+                Calendar
+              </Typography>
+            </Box>
+          </Box>
+          <Box height="250px" m="-20px 0 0 0">
+            
+          </Box>
         </Box>
-      </Box>
 
         {/* ROW 2 */}
+        {/* DIVISION 2 */}
         <Box
           gridColumn="span 4"
           gridRow="span 2"
@@ -182,38 +205,64 @@ const AirDashboard = () => {
           </Box>
         </Box>
 
+          {/* DIVISION 4 */}
         <Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor="rgba(255, 255, 255, 0.3)"
           borderRadius="30px"
-          opacity="0.9"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          p="20px"
           zIndex={2} // Ensure this is above stickers
         >
-          <Typography variant="h5" color={colors.grey[100]}>
-            Division 4
-          </Typography>
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
+                Humidity
+              </Typography>
+            </Box>
+          </Box>
+          <Box height="250px" m="-20px 0 0 0">
+            
+          </Box>
         </Box>
 
+        {/* DIVISION 5 */}
         <Box
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor="rgba(255, 255, 255, 0.3)"
           borderRadius="30px"
-          opacity="0.9"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          p="20px"
           zIndex={2} // Ensure this is above stickers
         >
-          <Typography variant="h5" color={colors.grey[100]}>
-            Division 5
-          </Typography>
+          <Box
+            mt="25px"
+            p="0 30px"
+            display="flex "
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Box>
+              <Typography
+                variant="h6"
+                fontWeight="600"
+                color={colors.grey[100]}
+              >
+                PM10
+              </Typography>
+            </Box>
+          </Box>
+          <Box height="250px" m="-20px 0 0 0">
+            
+          </Box>
         </Box>
       </Box>
     </Box>
